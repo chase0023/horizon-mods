@@ -1,0 +1,46 @@
+id = "trade_enchant_cycle"
+kind = "native-mod"
+owners = ["chase0023"]
+owner_ids = [193886252]
+icon = "icons/trade_enchant_cycle.png"
+categories = ["utility", "game-mechanics"]
+tags = ["trading", "enchanting", "villager", "reroll", "native", "quality-of-life"]
+screenshots = [
+  "screenshots/trade_enchant_cycle/1.png",
+  "screenshots/trade_enchant_cycle/2.png",
+  "screenshots/trade_enchant_cycle/3.png",
+]
+name = "Trade & Enchant Cycle"
+summary = "Reroll villager trades and enchanting offers with R — free, no lapis or XP, nothing reset."
+description = """Two quality-of-life features for trading and enchanting, as a native Horizon mod: a Rust source bundle, no jar and no Java.
+
+**Villager trade cycling** — sneak + right-click a villager to reroll its offers. Every offer comes from the game's own data-driven trade sets for that profession, level and villager type, so prices, demand, max uses and enchanted books behave exactly as vanilla. Used and sold-out trades (`uses > 0`) are kept as they are, and profession, level, XP, restock counters and demand are untouched. The click is claimed, so the trade screen does not open under it; a plain right-click still trades.
+
+**Enchanting offer cycling** — reroll the three offers with the `Reroll [R]` bar under the panel, or with **R**. The offers come from the game's own `enchant_offers` with the next seed from the world's random, so they are what vanilla would have generated. Nothing is spent: no lapis, no levels, no item damage, no enchantment applied, nothing auto-selected. A real click afterwards applies exactly the offer it promised. Only an unenchanted, enchantable item gets offers, which is vanilla's own rule.
+
+**In both screens** the same vanilla-styled `Reroll [R]` bar sits on the panel's bottom edge, where vanilla draws nothing, and **R** does the same thing as clicking it. The bar is placed from the panel's own origin and size, so it follows every GUI scale and window size. There is no cooldown, and a held key rerolls once. Item tooltips are never hidden: if one reaches the bar, it is drawn on top of it, as vanilla draws tooltips.
+
+**What it does not do.** It does not change vanilla's layout, textures or GUI, does not add a custom screen, and does not alter the network protocol. Both features are decided on the server side (single player and LAN host): a request names no target, so it can only reach the player's own open screen, and the server re-checks the channel, the config and the player's own menu before rerolling. On someone else's server the mod does nothing and desynchronises nothing. Nothing is read from or written to the network beyond Horizon's own mod-message channel.
+
+**Settings** (Options > Mods > Trade & Enchant Cycle) switch each feature on or off, choose the activation (bar only, or `R` too) and the feedback message style; the same settings live in `config/trade-enchant-cycle.json`.
+
+**Compatibility.** The bundle pins Horizon `c9d474dd9116e84c243f8992d75c11314df56f06` (Nightly `nightly-2026-11-01-c9d474d`, Minecraft 26.3) and horizon-mixins `0d6b103c70633d8fd9443d8d0acd3aadaacedb06`, because it reads game internals the stable hook surface does not expose (a villager's trade list, a guest's enchanting menu). It needs `NATIVE_HOOKS_API` 80 or later. It was built, applied and exercised in a real world on that Nightly; later Nightlies have not been validated.
+
+**Source.** `https://github.com/chase0023/trade-enchant-cycle` (MIT): the bundle in `mixins/trade_enchant_cycle/`, the same pure code compiled by `cargo test`, the game-side tests, the build scripts and a README with the hooks used and the known limitations. The `.hnmod` is the source: 18 payload files, a manifest with 6 modules and 11 injections, and this licence."""
+authors = ["chase0023"]
+license = "MIT"
+source = "https://github.com/chase0023/trade-enchant-cycle"
+
+[[versions]]
+version = "1.1.0"
+published = "2026-11-15"
+game = "26.3"
+file = "trade_enchant_cycle-1.1.0.hnmod"
+sha256 = "f5eb0b005643eae5053339c35442379f5e24e81d094970243b3741eda679cc2a"
+changelog = """First release.
+
+- Reroll a villager's offers with sneak + right-click: used and sold-out trades, profession, level, XP and demand are kept.
+- Reroll an enchanting table's three offers with the `Reroll [R]` bar or **R**: no lapis, no XP and no item spent, and the game's own offer generator behind it.
+- The bar is a footer on both panels, placed from the panel's rectangle, so it follows every GUI scale and never covers slots.
+- Tooltips stay on top: one that reaches the bar is drawn again over it.
+- No cooldown; a held key rerolls once."""
