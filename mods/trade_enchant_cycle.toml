@@ -24,9 +24,9 @@ description = """Two quality-of-life features for trading and enchanting, as a n
 
 **Settings** (Options > Mods > Trade & Enchant Cycle) switch each feature on or off, choose the activation (bar only, or `R` too) and the feedback message style; the same settings live in `config/trade-enchant-cycle.json`.
 
-**Compatibility.** The bundle pins Horizon `c9d474dd9116e84c243f8992d75c11314df56f06` (Nightly `nightly-2026-11-01-c9d474d`, Minecraft 26.3) and horizon-mixins `0d6b103c70633d8fd9443d8d0acd3aadaacedb06`, because it reads game internals the stable hook surface does not expose (a villager's trade list, a guest's enchanting menu). It needs `NATIVE_HOOKS_API` 80 or later. It was built, applied and exercised in a real world on that Nightly; later Nightlies have not been validated.
+**Compatibility.** The bundle pins Horizon `9f42064c11efe7ef3e5ed2baad7ddc2a3b36eea0` (the newest Nightly, published 2026-11-13, Minecraft 26.3) and horizon-mixins `0d6b103c70633d8fd9443d8d0acd3aadaacedb06`, because it reads game internals the stable hook surface does not expose (a villager's trade list, a guest's enchanting menu). It needs `NATIVE_HOOKS_API` 80 or later, so it builds on the Nightlies after that one too. It was applied and compiled on the newest Nightly with the registry's own `native/tools/native.py` (no warnings) and exercised feature by feature in a real world on `nightly-2026-11-01-c9d474d`.
 
-**Source.** `https://github.com/chase0023/trade-enchant-cycle` (MIT): the bundle in `mixins/trade_enchant_cycle/`, the same pure code compiled by `cargo test`, the game-side tests, the build scripts and a README with the hooks used and the known limitations. The `.hnmod` is the source: 18 payload files, a manifest with 6 modules and 11 injections, and this licence."""
+**Source.** `https://github.com/chase0023/trade-enchant-cycle` (MIT): the bundle in `mixins/trade_enchant_cycle/`, the same pure code compiled by `cargo test`, the game-side tests, the build scripts and a README with the hooks used and the known limitations. The `.hnmod` is the source: 18 payload files, a manifest with 6 modules and 11 injections, and this licence. The file in this entry was made from that source with `native/tools/native.py package`."""
 authors = ["chase0023"]
 license = "MIT"
 source = "https://github.com/chase0023/trade-enchant-cycle"
@@ -36,11 +36,12 @@ version = "1.1.0"
 published = "2026-11-15"
 game = "26.3"
 file = "trade_enchant_cycle-1.1.0.hnmod"
-sha256 = "f5eb0b005643eae5053339c35442379f5e24e81d094970243b3741eda679cc2a"
+sha256 = "9cc91d32339364bd016656e9487d18a2998614a5dbb66d5a4f16ca9c34ab1786"
 changelog = """First release.
 
 - Reroll a villager's offers with sneak + right-click: used and sold-out trades, profession, level, XP and demand are kept.
 - Reroll an enchanting table's three offers with the `Reroll [R]` bar or **R**: no lapis, no XP and no item spent, and the game's own offer generator behind it.
 - The bar is a footer on both panels, placed from the panel's rectangle, so it follows every GUI scale and never covers slots.
 - Tooltips stay on top: one that reaches the bar is drawn again over it.
-- No cooldown; a held key rerolls once."""
+- No cooldown; a held key rerolls once.
+- Pinned to Horizon 9f42064 (the newest Nightly, published 2026-11-13): applied and compiled there without warnings."""
