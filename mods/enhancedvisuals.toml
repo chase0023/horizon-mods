@@ -73,6 +73,7 @@ license = "LGPL-3.0-only"
 source = "https://github.com/chase0023/enhanced-visuals-port"
 icon = "icons/enhancedvisuals.png"
 categories = ["adventure", "decoration", "utility"]
+screenshots = ["screenshots/enhancedvisuals/1.jpg", "screenshots/enhancedvisuals/2.jpg", "screenshots/enhancedvisuals/3.jpg"]
 tags = ["port", "hud", "immersion", "blood", "blur", "shaders", "client-side"]
 key = "RWRWs/XGouk786RwIuxz/WdYAiQUf/1jZbsjtq+ekxQVSk5SXrp2d/As"
 
