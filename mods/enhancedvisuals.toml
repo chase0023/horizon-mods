@@ -78,17 +78,16 @@ tags = ["port", "hud", "immersion", "blood", "blur", "shaders", "client-side"]
 key = "RWRWs/XGouk786RwIuxz/WdYAiQUf/1jZbsjtq+ekxQVSk5SXrp2d/As"
 
 [[versions]]
-version = "1.0.0"
+version = "1.0.1"
 published = "2026-11-21"
 game = "26.3"
 file = "enhancedvisuals.hmod"
-sha256 = "768021d321ffa9b20d8b4c06ecb347c079af9ab1413bf58d29e1243d3e1ab762"
+sha256 = "fdbdb217eef212b6f300fd48373d9d908ea7e7ed27f5914faf911e571de8e730"
 signature = """
 untrusted comment: signature from minisign secret key
-RURWs/XGouk789CWh5tGURpBqNK/9lzlE7DR/sQtRx+p32pKAK90PQV0dKahPcwg+nESjsKMyUxk0Y9Q7j4aIPSwDecuoMVDAws=
-trusted comment: timestamp:1795272165	file:enhancedvisuals.hmod	hashed
-5eCTDl9ufHszvroPsJEo3iUClHcgaVhZoaAm44gIQ3m66VNS/kikiLzE99KsZflio7iXrtvXDs+3Gp623B8vBQ=="""
-changelog = """First release. A full port of EnhancedVisuals 1.8.35: blood by damage type, the elemental splats, the low-health
-pulse and the heartbeat, explosions with occlusion and ringing, splash potions, sand, the Enderman overlay, hunger
-desaturation, rain, the water-splash blur, the death-screen quips and twelve settings. Includes the companion shader
-pack that draws the original's blur and desaturation, installed on first start."""
+RURWs/XGouk78+guDq5dTgOHEifvIOfknuUgwp9qcXjS4B5W+PA+6wBBf20vCKZB0IYLvmiULPTvbFkBCrKRqiF9cyBiLkOEPQg=
+trusted comment: timestamp:1795278878	file:enhancedvisuals.hmod	hashed
+SEWXYJhnV2+TkZuHeLWrn2NTnu0x991NBmtkyGbkeELYbbY2qEd6m1hz+B1wXOuB1i2K7wsxdqeTLMHmxSDkBg=="""
+changelog = """Rebuilt for the Nov 21 game build, the one the launcher installs. Two of this mod's own types were
+named `Overlay` and `Hit`, the same as two API types, so a change to either was recorded as a use and the
+launcher turned the mod off; they are now `ScreenOverlay` and `PendingHit`. Nothing visual changed."""
