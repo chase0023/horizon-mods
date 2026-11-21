@@ -82,12 +82,12 @@ version = "1.0.1"
 published = "2026-11-21"
 game = "26.3"
 file = "enhancedvisuals.hmod"
-sha256 = "fdbdb217eef212b6f300fd48373d9d908ea7e7ed27f5914faf911e571de8e730"
+sha256 = "06c2fbca3734c02ab820b434c4f1696ca02302b008a021e054bd8e02fe26b8e5"
 signature = """
 untrusted comment: signature from minisign secret key
-RURWs/XGouk78+guDq5dTgOHEifvIOfknuUgwp9qcXjS4B5W+PA+6wBBf20vCKZB0IYLvmiULPTvbFkBCrKRqiF9cyBiLkOEPQg=
-trusted comment: timestamp:1795278878	file:enhancedvisuals.hmod	hashed
-SEWXYJhnV2+TkZuHeLWrn2NTnu0x991NBmtkyGbkeELYbbY2qEd6m1hz+B1wXOuB1i2K7wsxdqeTLMHmxSDkBg=="""
+RURWs/XGouk78xQ9UGX4BGaVzXuIvl2OcBSTnn39vNYjBqYmKeQ1Z83mb7JFPbRR1kxekc5HeYIjaeyEdD/M1HAcSmcx2Rn5VQM=
+trusted comment: timestamp:1795303148	file:enhancedvisuals.hmod	hashed
+f8DPO29TpaJzKuIpEj0PK89VMCouxm12dGUXpIdp676C+Ths2LG0m1deqYvF5AQPRybhOZLuwfGffqdf7ERwAQ=="""
 changelog = """Rebuilt for the Nov 21 game build, the one the launcher installs. Two of this mod's own types were
 named `Overlay` and `Hit`, the same as two API types, so a change to either was recorded as a use and the
 launcher turned the mod off; they are now `ScreenOverlay` and `PendingHit`. Nothing visual changed."""
