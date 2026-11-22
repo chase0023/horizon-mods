@@ -78,16 +78,17 @@ tags = ["port", "hud", "immersion", "blood", "blur", "shaders", "client-side"]
 key = "RWRWs/XGouk786RwIuxz/WdYAiQUf/1jZbsjtq+ekxQVSk5SXrp2d/As"
 
 [[versions]]
-version = "1.0.1"
-published = "2026-11-21"
+version = "1.0.2"
+published = "2026-11-22"
 game = "26.3"
 file = "enhancedvisuals.hmod"
-sha256 = "06c2fbca3734c02ab820b434c4f1696ca02302b008a021e054bd8e02fe26b8e5"
+sha256 = "b27c0fcff84c8f7fbd3ca459653cd35c0840070e2463b547107bdf1fc914685e"
 signature = """
 untrusted comment: signature from minisign secret key
-RURWs/XGouk78xQ9UGX4BGaVzXuIvl2OcBSTnn39vNYjBqYmKeQ1Z83mb7JFPbRR1kxekc5HeYIjaeyEdD/M1HAcSmcx2Rn5VQM=
-trusted comment: timestamp:1795303148	file:enhancedvisuals.hmod	hashed
-f8DPO29TpaJzKuIpEj0PK89VMCouxm12dGUXpIdp676C+Ths2LG0m1deqYvF5AQPRybhOZLuwfGffqdf7ERwAQ=="""
-changelog = """Rebuilt for the Nov 21 game build, the one the launcher installs. Two of this mod's own types were
-named `Overlay` and `Hit`, the same as two API types, so a change to either was recorded as a use and the
-launcher turned the mod off; they are now `ScreenOverlay` and `PendingHit`. Nothing visual changed."""
+RURWs/XGouk780l5xlf6cjYiilhKT7YC1r5z7A5X78JHaDHK6UiFtVAXbPyST6fiTQV/9udOYBb8au8iqzYeiyBZ+S7vr+ZNDQ4=
+trusted comment: timestamp:1795341108	file:enhancedvisuals.hmod	hashed
+Mc7gKKNTPI3DCFQ8/j8pEox+7GEwuTC4rvIqJnrnI/zL7TKNG4EDr4W4dVEOwC3QlBt0WSeyiMgMi9t8SD9TBA=="""
+changelog = """Ships the complete GNU GPL v3 text as COPYING beside LICENSE (LGPLv3), which incorporates it, and
+NOTICE now says why. Fixes the shader toggle's inverted default, which drew the pack's blur and this
+mod's haze together on a fresh install. A queued hit now carries the player it landed on and its tick,
+so another player's hit is never this player's splat."""
