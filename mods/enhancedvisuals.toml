@@ -78,6 +78,20 @@ tags = ["port", "hud", "immersion", "blood", "blur", "shaders", "client-side"]
 key = "RWRWs/XGouk786RwIuxz/WdYAiQUf/1jZbsjtq+ekxQVSk5SXrp2d/As"
 
 [[versions]]
+version = "1.0.4"
+published = "2026-11-23"
+game = "26.3"
+file = "enhancedvisuals.hmod"
+sha256 = "c1b4572d26214a73fd82737fd5d5f9c211dc0f73b4dbd3d22205f7f15d933157"
+signature = """
+untrusted comment: signature from minisign secret key
+RURWs/XGouk788YCeNCpL26lKeD/rELC7FMjZL0Xp3Bw7YRjBs43JhkKQay6AJTHqoLPRVNYL7wRQFzx5M0yQwN/2PjE86HmEwc=
+trusted comment: timestamp:1795406859	file:enhancedvisuals.hmod	hashed
+wpZJnty7tbiCrInZR2dT+9cipAHBtam+IG6xQMIABuJ6HIxuui4Xc9jXtBA1gp2qJWukZJsLLCpzEIbigi9EBg=="""
+changelog = """Pinned to Nightly 2026-11-22 (f1bb66f), the build the launcher installs; cargo horizon-mod update
+from 2b77287 reported none of the 275 API items this mod uses changed, so nothing else changed."""
+
+[[versions]]
 version = "1.0.3"
 published = "2026-11-22"
 game = "26.3"
